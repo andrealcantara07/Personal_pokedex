@@ -39,6 +39,13 @@ hr{
   animation: move 0.8s infinite;
   animation-delay: 3s;
 }
+#fadeOut{
+  animation: fadeOut 6s backwards;
+
+}
+#enlarge{
+  animation: enlarge 3s forwards;
+}
 
 /* KEYFRAMES */
 
@@ -60,4 +67,17 @@ hr{
   }
 
 
+}
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity:0;}
+
+}
+@keyframes enlarge {
+0%{
+  transform: scale3d(1.0);
+}
+  100%{
+  transform:scale(5.0);
+  }
 }
