@@ -25,26 +25,27 @@ hr{
   opacity: 0.7;
 }
 #trainer{
+  position: relative;
+  z-index: 1;
   margin-top: 3%;
   width: 13%;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  display: inline-block;
 }
 #greatball{
-  position: relative;
-  bottom: 220px;
-  left: 220px;
   width: 4%;
   animation: move 0.8s infinite;
   animation-delay: 3s;
 }
 #fadeOut{
-  animation: fadeOut 6s backwards;
+  animation: fadeOut 4s forwards;
+  animation-delay: 6s;
 
 }
 #enlarge{
   animation: enlarge 3s forwards;
+  animation-delay: 6s;
 }
 
 /* KEYFRAMES */
@@ -70,14 +71,18 @@ hr{
 }
 @keyframes fadeOut {
   0% {opacity: 1;}
-  100% {opacity:0;}
+  50% {opacity:0;}
+  100%{opacity:0;}
 
 }
 @keyframes enlarge {
 0%{
-  transform: scale3d(1.0);
+  transform: scale(1.0);
 }
+  80%{
+  transform:scale(100.0);
+  }
   100%{
-  transform:scale(5.0);
+    transform: scale(1.0);
   }
 }
