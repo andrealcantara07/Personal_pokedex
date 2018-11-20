@@ -1,14 +1,29 @@
+
 body{
   background-image: url('https://images.unsplash.com/uploads/14116941824817ba1f28e/78c8dff1?ixlib=rb-0.3.5&s=1b18a99bd071f03f1331789065b3705a&auto=format&fit=crop&w=1280&q=80');
   background-repeat: no-repeat;
+  background-size: cover;
   color: #B3A125;
-  text-align: center; 
+  text-align: center;
   margin: 0;
   padding: 0;
 }
 h1{
   margin-top: 3%;
   text-align: center;
+}
+p{
+  margin:0;
+  display: inline;
+
+}
+ul{
+  display: inline;
+  list-style-type: none;
+  font-size: 1.7em;
+}
+br{
+  display: inline;
 }
 
 #logo{
@@ -33,9 +48,10 @@ h1{
   z-index: 1;
   margin-top: 3%;
   width: 13%;
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* display: inline-block; */
+  margin-left: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 #greatball{
   width: 4%;
@@ -52,13 +68,34 @@ h1{
   animation-delay: 6s;
 }
 #poke1{
-  position: relative;
   width: 20%;
-  text-align: left;
+  text-align: center;
+  margin-left: 4%;
+  padding-bottom: 2%;
+}
+.container{
+  position: relative;
+  bottom: 20em;
+  left: 15em;
+
 }
 .deBlock{
-  display: inline-block;
+  display: block;
 }
+.blocc{
+  color: #FFDE00;
+  padding-bottom: 5%;
+}
+.box{
+  border: solid rgba(255, 222, 0, 0.5) 1px;
+  display: inline-block;
+  border-radius: 10%;
+  padding: 1%;
+  background-color: rgba(59, 76, 202, 0.4);
+  margin-left: 15%;
+  width: 35%;
+}
+
 /* KEYFRAMES */
 
 @keyframes move {
