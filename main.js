@@ -44,13 +44,13 @@ class Pokemon{
   }
 
 }
-axios.get('http://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
+axios.get('https://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
   .then(run);
 
 
 
   function run (poke1){
-    let img = "http://pa1.narvii.com/6395/8882ca52ae8c93fe9d7601770c074d8072f27a13_00.gif";
+    let img = "https://pa1.narvii.com/6395/8882ca52ae8c93fe9d7601770c074d8072f27a13_00.gif";
     let name = "Typhlosion";
     let hp = poke1.data.stats[5].base_stat;
     let attack = poke1.data.stats[4].base_stat;
@@ -78,7 +78,7 @@ axios.get('http://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
 
   }
 
-  axios.get('http://fizal.me/pokeapi/api/v2/name/'+volcanion.name+'.json')
+  axios.get('https://fizal.me/pokeapi/api/v2/name/'+volcanion.name+'.json')
     .then(run1);
 
 
@@ -108,12 +108,12 @@ axios.get('http://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
 
     }
 
-    axios.get('http://fizal.me/pokeapi/api/v2/name/'+solgaleo.name+'.json')
+    axios.get('https://fizal.me/pokeapi/api/v2/name/'+solgaleo.name+'.json')
       .then(run2);
 
 
       function run2 (poke3){
-        let img = "http://i.imgur.com/aENiQLZ.gif";
+        let img = "https://i.imgur.com/aENiQLZ.gif";
         let name = "Solgaleo";
         let hp = poke3.data.stats[5].base_stat;
         let attack = poke3.data.stats[4].base_stat;
