@@ -50,7 +50,7 @@ axios.get('https://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
 
 
   function run (poke1){
-    let img = "https://pa1.narvii.com/6395/8882ca52ae8c93fe9d7601770c074d8072f27a13_00.gif";
+    let img = "http://pa1.narvii.com/6395/8882ca52ae8c93fe9d7601770c074d8072f27a13_00.gif";
     let name = "Typhlosion";
     let hp = poke1.data.stats[5].base_stat;
     let attack = poke1.data.stats[4].base_stat;
@@ -113,7 +113,7 @@ axios.get('https://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
 
 
       function run2 (poke3){
-        let img = "https://i.imgur.com/aENiQLZ.gif";
+        let img = "http://i.imgur.com/aENiQLZ.gif";
         let name = "Solgaleo";
         let hp = poke3.data.stats[5].base_stat;
         let attack = poke3.data.stats[4].base_stat;
