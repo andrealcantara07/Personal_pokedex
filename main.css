@@ -25,6 +25,20 @@ ul{
 br{
   display: inline;
 }
+button{
+
+  position: relative;
+  top: 6em;
+  right: 17em;
+  background-color: rgba(59, 76, 202, 0.4);
+  color: rgba(255, 222, 0, 1);
+  border-color: rgba(255, 222, 0, 0.5);
+  border-radius: 50%;
+  padding: 1%;
+}
+button:focus{
+  outline: none;
+}
 
 #logo{
   width:20%;
@@ -52,6 +66,7 @@ br{
   margin-left: auto;
   margin-right: auto;
   display: block;
+  animation: slideLeft;
 }
 #greatball{
   width: 4%;
@@ -73,6 +88,18 @@ br{
   margin-left: 4%;
   padding-bottom: 2%;
 }
+
+#moveRed{
+  animation: slideLeft;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+
+}
+.drawing{
+  animation: flipInX;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
 .container{
   position: relative;
   bottom: 20em;
@@ -92,53 +119,44 @@ br{
   border-radius: 10%;
   padding: 1%;
   background-color: rgba(59, 76, 202, 0.4);
-  margin-left: 15%;
+  margin-left: 25%;
   width: 35%;
 }
 .adjusted{
   position: relative;
-  right: 25em;
-  top: 5em;
+  right: 30em;
+  bottom: 40em;
 }
 .invis{
   opacity:0;
 }
+.badges{
+
+  width: 65px;
+  height:65px;
+  padding: 2%;
+}
 
 /* KEYFRAMES */
 
-@keyframes move {
-  0 {
-    transform: translate3d(0, 0, 0);
-  }
-  10%, 90%{
-    transform: translate3d(-1px, 0, 0);
-  }
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
+@keyframes flipInX {
+  0% {
+      transform: rotate3d(1, 0, 0, 90deg);
+      opacity: 0;
+    }
+   100% {
 
+      opacity: 1;
+   }
+}
 
-}
-@keyframes fadeOut {
-  0% {opacity: 1;}
-  50% {opacity:0;}
-  100%{opacity:0;}
+@keyframes slideLeft {
+  0%{
+    margin-right: 80%;
 
-}
-@keyframes enlarge {
-0%{
-  transform: scale(1.0);
-}
-  80%{
-  transform:scale(100.0);
   }
   100%{
-    transform: scale(1.0);
+    margin-right: 0%;
   }
+
 }
