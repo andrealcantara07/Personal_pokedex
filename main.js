@@ -1,18 +1,15 @@
-// axios.get('http://fizal.me/pokeapi/api/v2/name/typhlosion.json')
-//   .then(test);
-
-//   function test(getter){
-//     console.log(getter);
-//   }
-
-// test();
+let red = document.getElementById('trainer');
+let button = document.querySelector('button');
+let draw = document.getElementById('drawing');
 
 
 class Trainer {
   constructor(name){
   this.name= name;
-
+  this.pokemon = [];
   }
+
+
 
 }
 
@@ -20,13 +17,17 @@ class Trainer {
 let typhlosion = new Trainer('typhlosion');
 let volcanion = new Trainer('volcanion');
 let solgaleo = new Trainer('solgaleo');
+
+let andre = new Trainer('Andre');
+
 let pokeName;
+
 
 // console.log(typhlosion);
 // console.log(volcanion);
 // console.log(giratina);
 
-class Pokemon {
+class Pokemon{
   constructor(img, name, hp, attack, defense, abilities){
     this.img = img,
     this.name = name,
@@ -71,10 +72,12 @@ axios.get('http://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
     let pokemon1 = new Pokemon(img, name, hp, attack, defense, concat);
 
 
+     andre.pokemon.push(pokemon1);
 
       // pokemon1.render();
 
   }
+
   axios.get('http://fizal.me/pokeapi/api/v2/name/'+volcanion.name+'.json')
     .then(run1);
 
@@ -98,10 +101,10 @@ axios.get('http://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
 
 
       let pokemon2 = new Pokemon(img, name, hp, attack, defense, concat);
+      andre.pokemon.push(pokemon2);
 
 
-
-         // pokemon2.render();
+         pokemon2.render();
 
     }
 
@@ -129,9 +132,27 @@ axios.get('http://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
 
         let pokemon3 = new Pokemon(img, name, hp, attack, defense, concat);
 
+        andre.pokemon.push(pokemon3);
 
-
-           pokemon3.render();
+           // pokemon3.render();
 
       }
-    
+        let counter = 0;
+
+      function swit(){
+
+        counter = (counter + 1) % andre.pokemon.length;
+         andre.pokemon[counter].render();
+
+
+      }
+      function appear(){
+
+        draw.className="drawing";
+      }
+      function disappear(){
+        draw.className="invis";
+      }
+      button.addEventListener('click', swit);
+      red.addEventListener('mouseover', appear);
+      red.addEventListener('mouseleave', disappear);
