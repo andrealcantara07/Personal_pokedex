@@ -8,8 +8,16 @@ class Trainer {
   this.name= name;
   this.pokemon = [];
   }
-
-
+  all(everyPoke){
+    this.pokemon.push(everyPoke);
+  }
+  get(everyPoke){
+    for (let i = 0; i < this.pokemon.length; i++){
+      if (name === this.pokemon[i].name){
+        return this.pokemon[i];
+      }
+    }
+  }
 
 }
 
@@ -72,11 +80,13 @@ axios.get('https://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
     let pokemon1 = new Pokemon(img, name, hp, attack, defense, concat);
 
 
-     andre.pokemon.push(pokemon1);
-
+     andre.all(pokemon1);
+    
       // pokemon1.render();
 
   }
+  
+
 
   axios.get('https://fizal.me/pokeapi/api/v2/name/'+volcanion.name+'.json')
     .then(run1);
@@ -101,7 +111,8 @@ axios.get('https://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
 
 
       let pokemon2 = new Pokemon(img, name, hp, attack, defense, concat);
-      andre.pokemon.push(pokemon2);
+
+      andre.all(pokemon2);
 
 
          pokemon2.render();
@@ -132,11 +143,12 @@ axios.get('https://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
 
         let pokemon3 = new Pokemon(img, name, hp, attack, defense, concat);
 
-        andre.pokemon.push(pokemon3);
+        andre.all(pokemon3);
 
            // pokemon3.render();
 
       }
+   
         let counter = 0;
 
       function swit(){
@@ -156,3 +168,5 @@ axios.get('https://fizal.me/pokeapi/api/v2/name/'+typhlosion.name+'.json')
       button.addEventListener('click', swit);
       red.addEventListener('mouseover', appear);
       red.addEventListener('mouseleave', disappear);
+
+      
